@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
         fontFamily: "Roboto",
         textAlign: "left",
         fontSize: 24,
+        color: "black",
         padding: 10,
     },
     about: {
@@ -69,12 +70,14 @@ const styles = StyleSheet.create({
     aboutText: {
         fontFamily: "Roboto",
         textAlign: "left",
+        color: "black",
         fontSize: 15,
         marginHorizontal: 10,
     },
     content: {
         width: "100%",
         fontFamily: "Roboto",
+        color: "black",
         textAlign: "left",
         fontSize: 18,
         padding: 10,

@@ -7,9 +7,11 @@ export function SimplifiedReader(props) {
 
     const { article } = props.route.params;
 
+   
+
     return (
         <View style={styles.container}>
-            <ReadabilityView url={article.url} title={article.title} />
+            <ReadabilityView url={article.url} style={{color:'black'}} title={article.title} />
         </View>
     )
 }

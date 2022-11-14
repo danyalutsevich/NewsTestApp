@@ -13,11 +13,11 @@ export function SortBar(props) {
     return (
         <View style={styles.container}>
             {showDate ? <DatePicker value={date} onChange={e => { setDate(new Date(e.nativeEvent.timestamp)); setShowDate(false) }} /> : null}
-            <Text>Results: {totalResults || 0}</Text>
+            <Text style={styles.textStyle}>Results: {totalResults || 0}</Text>
             <Dropdown options={["publishedAt", "relevancy", "popularity"]} />
             <TouchableOpacity style={styles.changeDate} onPress={() => { setShowDate(!showDate) }}>
                 <Image source={require("../../assets/calendar_month.png")} style={styles.Icon}></Image>
-                <Text>{date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate()}</Text>
+                <Text style={styles.textStyle}>{date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate()}</Text>
             </TouchableOpacity>
         </View>
     )
@@ -41,6 +41,9 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "center",
+    },
+    textStyle: {
+        color: "black",
     },
     Icon: {
         width: 20,

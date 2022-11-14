@@ -22,7 +22,7 @@ export function Dropdown(props) {
                     options.map((option, index) => {
                         return (
                             <TouchableOpacity key={index} onPress={() => { setSortBy(option); setVisible(false) }} style={[styles.option, option == sortBy ? styles.selectedOption : null]}>
-                                <Text>
+                                <Text style={styles.optionText}>
                                     {option}
                                 </Text>
                             </TouchableOpacity>
@@ -36,7 +36,7 @@ export function Dropdown(props) {
     return (
         <TouchableOpacity style={styles.button} onPress={toggleDropdown}>
             <Image source={require("../../assets/sort.png")} style={styles.dropdownIcon}></Image>
-            <Text numberOfLines={1}>{sortBy}</Text>
+            <Text numberOfLines={1} style={styles.optionText}>{sortBy}</Text>
             <Image source={require("../../assets/arrow-drop-down.png")} style={styles.dropdownIcon}></Image>
             {renderDropdown()}
         </TouchableOpacity>
@@ -62,6 +62,10 @@ const styles = StyleSheet.create({
     },
     option: {
         padding: 10,
+        color: 'black',
+    },
+    optionText:{
+        color: 'black',
     },
     selectedOption: {
         borderRadius: 10,

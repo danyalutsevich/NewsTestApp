@@ -58,7 +58,6 @@ export function Home(props) {
             >
                 <SortBar totalResults={articles.totalResults}></SortBar>
                 {(() => {
-                    console.log(articles)
                     if (articles.status == "error") {
                         return (
                             <View style={styles.error}>
@@ -100,11 +99,14 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fafafa',
+        width: '100%',
+        height: '100%',
         alignItems: 'center',
         justifyContent: 'center',
     },
     scrollView: {
         width: "100%",
+        height: '100%',
 
     },
     error: {

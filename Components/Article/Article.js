@@ -46,10 +46,12 @@ const styles = StyleSheet.create({
     title: {
         fontFamily: "Roboto",
         textAlign: "left",
+        color: "black",
         fontSize: 24,
     },
     description: {
         fontFamily: "Roboto",
+        color: "#555",
         textAlign: "left",
         fontSize: 15,
     },
